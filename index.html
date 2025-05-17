@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple HTML Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+    #time {
+      font-size: 1.5em;
+      color: #333;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>This is simple HTML page.</h1>
+  <div id="time">Loading current time...</div>
+
+  <script>
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString();
+      document.getElementById('time').textContent = 'Current Time: ' + timeString;
+    }
+
+    updateTime(); // Show time immediately
+    setInterval(updateTime, 1000); // Update every second
+  </script>
+
+</body>
+</html>
